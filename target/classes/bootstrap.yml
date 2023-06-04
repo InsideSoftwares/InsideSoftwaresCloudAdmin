@@ -1,5 +1,13 @@
 spring:
   application:
     name: Inside_CloudAdmin
+  boot:
+    admin:
+      context-path: /admin
 server:
   port: 8889
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
