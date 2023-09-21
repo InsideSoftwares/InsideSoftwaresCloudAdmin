@@ -1,13 +1,24 @@
+server:
+  port: ${CLOUD_ADMIN_PORT:8889}
+
 spring:
   application:
     name: Inside_CloudAdmin
   boot:
     admin:
       context-path: /admin
-server:
-  port: 8889
+  profiles:
+    active: ${CLOUD_ADMIN_PROFILES:native}
+  cloud:
+    config:
+      uri: ${CLOUD_CONFIG_URI:http://localhost:8888}
+      username: ${CLOUD_CONFIG_NAME:ADMIN}
+      password: ${CLOUD_CONFIG_PASSWORD:ADMIN}
 
 eureka:
+  renewalPercentThreshold: 0.85
+  server:
+    enableSelfPreservation: true
   client:
     registerWithEureka: false
     fetchRegistry: false
