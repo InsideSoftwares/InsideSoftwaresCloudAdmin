@@ -2,6 +2,7 @@
 
 Projeto responsavel pelo registro de aplicações e administração dos mesmo, utilizando o `Eureka` e `Spring Boot Admin` 
 * Versão disponivel: 1.0-SNAPSHOT
+* [License](LICENSE.MD)
 
 ## Framework Utilizado
 
