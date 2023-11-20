@@ -4,9 +4,6 @@ server:
 spring:
   application:
     name: Inside_CloudAdmin
-  boot:
-    admin:
-      context-path: /admin
   profiles:
     active: ${CLOUD_ADMIN_PROFILES:native}
   cloud:
